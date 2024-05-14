@@ -2284,15 +2284,15 @@ pub(crate) const ENABLE_GOSSIP_TICKS: u8 = 5;
 /// The maximum number of unfunded channels we can have per-peer before we start rejecting new
 /// (inbound) ones. The number of peers with unfunded channels is limited separately in
 /// [`MAX_UNFUNDED_CHANNEL_PEERS`].
-const MAX_UNFUNDED_CHANS_PER_PEER: usize = 4;
+pub(crate) const MAX_UNFUNDED_CHANS_PER_PEER: usize = 4;
 
 /// The maximum number of peers from which we will allow pending unfunded channels. Once we reach
 /// this many peers we reject new (inbound) channels from peers with which we don't have a channel.
-const MAX_UNFUNDED_CHANNEL_PEERS: usize = 50;
+pub(crate) const MAX_UNFUNDED_CHANNEL_PEERS: usize = 50;
 
 /// The maximum number of peers which we do not have a (funded) channel with. Once we reach this
 /// many peers we reject new (inbound) connections.
-const MAX_NO_CHANNEL_PEERS: usize = 250;
+pub(crate) const MAX_NO_CHANNEL_PEERS: usize = 250;
 
 /// Information needed for constructing an invoice route hint for this channel.
 #[derive(Clone, Debug, PartialEq)]
